@@ -169,7 +169,7 @@ public class MovieCollection
         for (int i = 0; i < movies.size(); i++) {
             sortedCast = cast.split("/|");
             for (int j = 0; j < sortedCast.length; j++) {
-                
+                System.out.println(sortedCast[j]);
             }
         }
         /*
