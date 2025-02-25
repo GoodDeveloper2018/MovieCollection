@@ -244,7 +244,33 @@ public class MovieCollection
 
     private void listGenres()
     {
+        String genres = scanner.nextLine();
+        String sortedGenres[];
+        ArrayList<Movie> Movies = new ArrayList<Movie>();
 
+        for (int i = 0; i < movies.size(); i++) {
+            String movieGenre = movies.get(i).getGenres();
+            movieGenre.toLowerCase();
+            System.out.println(i + ")" + movieGenre);
+
+            if (movieGenre.indexOf(genres) != -1)
+            {
+                //add the Movie objest to the results list
+                Movies.add(movies.get(i));
+            }
+        }
+        System.out.println("Which genre would you like to learn more about?");
+        System.out.print("Enter number: ");
+
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        Movie selectedGenre = Movies.get(choice - 1);
+
+        displayMovieInfo(selectedGenre);
+
+        System.out.println("\n ** Press Enter to Return to Main Menu **");
+        scanner.nextLine();
     }
 
     private void listHighestRated()
