@@ -145,7 +145,6 @@ public class MovieCollection
 
     /**
      * Sorts a list of movies alphabetically by title, using a simple insertion sort.
-     * You could replace this with Collections.sort(...) if desired.
      */
     private void sortResults(ArrayList<Movie> listToSort)
     {
@@ -339,7 +338,7 @@ public class MovieCollection
     }
 
     /**
-     * Lists the top 50 rated movies (or as many as we have if < 50).
+     * Lists the top 50 rated movies
      */
     private void listHighestRated()
     {
@@ -376,7 +375,7 @@ public class MovieCollection
     }
 
     /**
-     * Lists the top 50 highest revenue movies (or fewer if we have fewer than 50).
+     * Lists the top 50 highest revenue movies
      */
     private void listHighestRevenue()
     {
@@ -439,8 +438,8 @@ public class MovieCollection
                 int revenue = Integer.parseInt(movieFromCSV[10]);
 
                 Movie nextMovie = new Movie(title, cast, director, tagline,
-                                            keywords, overview, runtime,
-                                            genres, userRating, year, revenue);
+                        keywords, overview, runtime,
+                        genres, userRating, year, revenue);
                 movies.add(nextMovie);
             }
             bufferedReader.close();
